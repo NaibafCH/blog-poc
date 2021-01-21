@@ -1,0 +1,187 @@
+---
+layout: post
+status: publish
+published: true
+title: Sitecore Cookies
+author:
+  display_name: Andreas Klein
+  login: aklein
+  email: andreas.klein@namics.com
+  url: ''
+author_login: aklein
+author_email: andreas.klein@namics.com
+wordpress_id: 2027
+wordpress_url: http://sitecore.namics.com/?p=2027
+date: '2015-03-13 14:05:42 +0100'
+date_gmt: '2015-03-13 13:05:42 +0100'
+categories:
+- Allgemein
+- Development in Sitecore
+- Sitecore 8
+tags:
+- Cookie
+- Sitecore 8
+comments: []
+---
+<p>Das Sitecore CMS verwendet diverse Cookies. Eine genaue Auflistung der verwendeten Cookies gibt es allerdings nicht.<br />
+Eine Auflistung (aktuelle Liste zu Sitecore 8) mit den g&auml;ngisten findet sich hier:<br />
+<!--more--></p>
+<table style="width: 100%;">
+<tbody>
+<tr style="background-color: #79c843; color: white;">
+<th style="padding: 4px;">Cookie</th>
+<th style="padding: 4px;">Beschreibung</th>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">.ASPXAUTH</td>
+<td style="padding: 4px;">ASP.NET Cookie, das bestimmt ob der User authentifiziert ist oder nicht. Der Wert ist mit dem MachineKey encrypted.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">ASP.NET_SessionId</td>
+<td style="padding: 4px;">ASP.NET Cookie, das automatisch beim Aufruf erstellt wird. Beinhaltet den Sessionstatus.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">__CSRFCOOKIE</td>
+<td style="padding: 4px;">Security Cookie zum verhindern von Anfragef&auml;lschungen. CSRF steht f&uuml;r Cross-Site-Request-Forgery.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">__RequestVerificationToken</td>
+<td style="padding: 4px;">Security Cookie zum verhindern von Anfragef&auml;lschungen.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">__CSRFCOOKIE</td>
+<td style="padding: 4px;">Security Cookie zum verhindern von Anfragef&auml;lschungen. CSRF steht f&uuml;r Cross-Site-Request-Forgery.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px; background-color: #79c843; color: #fff;" colspan="2">Sitecore DMS</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">SC_ANALYTICS_GLOBAL_COOKIE</td>
+<td style="padding: 4px;">Das Sitecore Analytics Cookie misst den Traffic der Website und identifiziert den Besucher &uuml;ber die Session hinweg. Das Cookie wird also mit der Session nicht gel&ouml;scht, sondern wird erst nach einem Jahr ersetzt.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">SC_ANALYTICS_SESSION_COOKIE</td>
+<td style="padding: 4px;">Das Sitecore Analytics Cookie verfolgt den Besucher w&auml;hrend seiner Session. Beim schliessen und erneuten &ouml;ffnen des Browsers startet eine neue Besucher-Session mit neuer Cookie ID.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px; background-color: #79c843; color: #fff;" colspan="2">Sites (Cookies, die pro Site angelegt werden)</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">{site}#lang (website#lang)</td>
+<td style="padding: 4px;">Die aktuelle Spracheinstellung. Man beachte, dieses Cookie wird f&uuml;r jede in Sitecore eingerichtete Site angelegt. Das Cookie greift erst wenn in der Url weder ein Sprache im Pfad (/en) noch QueryString (sc_lang=en) angegeben wurde.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">{site}#sc_mode (website#sc_mode)</td>
+<td style="padding: 4px;">Entspricht derselben Funktion wie als QueryString Parameter. Gibt also an in welchem Modus man sich befindet. (M&ouml;gliche Werte: edit, preview, normal)</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">{site}#sc_debug (website#sc_debug)</td>
+<td style="padding: 4px;">Entspricht derselben Funktion wie als QueryString Parameter. Gibt &uuml;ber die Werte 1 und 0 an, ob man sich im Debug Modus von Sitecore befindet.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">{site}#sc_prof (website#sc_prof)</td>
+<td style="padding: 4px;">Entspricht derselben Funktion wie als QueryString Parameter. Gleichzusetzen mit Debug Profile Button "Activate".</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">{site}#sc_rb (website#sc_rb)</td>
+<td style="padding: 4px;">Entspricht derselben Funktion wie als QueryString Parameter. Gleichzusetzen mit Debug Checkbox "Rendering Borders".</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">{site}#sc_ri (website#sc_ri)</td>
+<td style="padding: 4px;">Entspricht derselben Funktion wie als QueryString Parameter. Gleichzusetzen mit Debug Checkbox "Rendering Information".</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">{site}#sc_trace (website#sc_trace)</td>
+<td style="padding: 4px;">Entspricht derselben Funktion wie als QueryString Parameter. Gleichzusetzen mit Debug Trace Button "Activate".</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">{site}#sc_date (website#sc_date)</td>
+<td style="padding: 4px;">Das Selektierte Datum im Page Editor f&uuml;r die Preview des Inhaltes zu einer bestimmten Zeit.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px; background-color: #79c843; color: #fff;" colspan="2">Path Analyzer</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">scPathAnalyzer_treeDefinition</td>
+<td style="padding: 4px;">Path Analyzer Map Selektion. Damit wird die letzte Auswahl gespeichert.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">scPathAnalyzer_fromDate</td>
+<td style="padding: 4px;">Path Analyzer Filter Range Startwert. Damit wird die letzte Auswahl gespeichert.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">scPathAnalyzer_toDate</td>
+<td style="padding: 4px;">Path Analyzer Filter Range Endwert. Damit wird die letzte Auswahl gespeichert.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px; background-color: #79c843; color: #fff;" colspan="2">Experience Analytics</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">scExperienceAnalytics_FromDate</td>
+<td style="padding: 4px;">Experience Analytics Filter Range Startwert.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">scExperienceAnalytics_ToDate</td>
+<td style="padding: 4px;">Experience Analytics Filter Range Endwert.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">scExperienceAnalytics_Subsite</td>
+<td style="padding: 4px;">Experience Analytics Filter. Die Auswertungen k&ouml;nnen auf gewisse Sites gefiltert werden.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px; background-color: #79c843; color: #fff;" colspan="2">Experience Editor</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">sc_last_page_mode_command</td>
+<td style="padding: 4px;">Speichert das letzte abgesetzte Kommando aus dem Page Editor.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">sitecore_webedit_activestrip</td>
+<td style="padding: 4px;">Speichert, welcher Ribbon Reiter zuletzt selektiert war, um bei erneutem Aufruf den Tab wieder zu &ouml;ffnen. (Beispielwerte: AdvancedStrip_ribbon_tab, ViewStrip_ribbon_tab)</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px; background-color: #79c843; color: #fff;" colspan="2">Explore View</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">sc_expview</td>
+<td style="padding: 4px;">Gibt an ob die Explore View ge&ouml;ffnet ist. Wert 1 f&uuml;r ge&ouml;ffnet.</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">left</td>
+<td style="padding: 4px;">Bestimmt, ob die linke Akkordeonansicht ge&ouml;ffnet ist oder nicht. (false = ge&ouml;ffnet)</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">right</td>
+<td style="padding: 4px;">Bestimmt, ob die rechte Akkordeonansicht ge&ouml;ffnet ist oder nicht. (false = ge&ouml;ffnet)</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">accordions-editor</td>
+<td style="padding: 4px;">Speichert welche Akkordeon Lamelle in der linken Akkordeonansicht ge&ouml;ffnet ist. (Speichert ID)</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">accordions-viewer</td>
+<td style="padding: 4px;">Speichert welche Akkordeon Lamelle in der rechten Akkordeonansicht ge&ouml;ffnet ist. (Speichert ID)</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px; background-color: #79c843; color: #fff;" colspan="2">Andere</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">sitecore_userticket</td>
+<td style="padding: 4px;">Cookie wird an Autoren vergeben, f&uuml;rs CMS Backend.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">sc_fv</td>
+<td style="padding: 4px;">Flash Version</td>
+</tr>
+<tr style="background-color: #eee; padding: 4px;">
+<td style="padding: 4px;">sc_pview_shuser</td>
+<td style="padding: 4px;">Wird benutzt beim &ouml;ffnen der Preview und speichert Preview und Debugging Optionen.</td>
+</tr>
+<tr style="background-color: #fff;">
+<td style="padding: 4px;">scContentEditorFoldersWidth</td>
+<td style="padding: 4px;">Dieses Cookie speichert die Breite der Tree-Navigation des Content Editors. Das heisst: &Auml;ndert sich die Breite der Navigation wird damit auch der Cookie Wert auf die entsprechende Pixel Breite gesetzt.</td>
+</tr>
+</tbody>
+</table>
+<h2 style="padding-top:20px;"><strong>Weitere Cookies</strong></h2>
+<p>Fehlende Cookies d&uuml;rfen gerne &uuml;ber die Kommentarfunktion erg&auml;nzt werden.</p>
