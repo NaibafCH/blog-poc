@@ -12,9 +12,9 @@ layout: default
       {% assign author = site.authors | where: 'short_name', page.author | first %}
       {% assign author_migrated = site.authors | where: 'short_name', page.author.login | first %}
       {% if author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ author.url }}" class="p-author h-card" itemprop="name">{{ author.name }}</a></span>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ author.url | relative_url }}" class="p-author h-card" itemprop="name">{{ author.name }}</a></span>
       {% elsif author_migrated %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ author_migrated.url }}" class="p-author h-card" itemprop="name">{{ author_migrated.name }}</a></span>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ author_migrated.url | relative_url }}" class="p-author h-card" itemprop="name">{{ author_migrated.name }}</a></span>
       {% elsif page.author and page.author.display_name %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author.display_name }}</span></span>
       {% endif %}</p>
