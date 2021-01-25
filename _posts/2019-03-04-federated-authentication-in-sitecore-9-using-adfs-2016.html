@@ -34,43 +34,43 @@ comments: []
 <li>Right click on&nbsp;<strong>Application Groups</strong>&nbsp;and add new application group.</li>
 <li>In the first step of&nbsp;<strong>Add Application Group Wizard</strong>, enter the name of the group, description and for the template choose&nbsp;<strong>Server application accessing a web API</strong>, and click Next.</li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/001.png"><img class="alignnone size-medium wp-image-4699" src="https://sitecore.namics.com/files/2018/06/001-300x195.png" alt="001" width="300" height="195" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/001.png"><img class="alignnone size-medium wp-image-4699" src="/files/2018/06/001-300x195.png" alt="001" width="300" height="195" /></a></p>
 <ul>
 <li>On&nbsp;<strong>Server application tab</strong>, enter the&nbsp;<strong>Redirect URI</strong>&nbsp;of your Sitecore CM instance and add it to the list. Note the&nbsp;<strong>Client Identifier</strong>&nbsp;that was generated. It will be used later.</li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/002.png"><img class="alignnone size-medium wp-image-4701" src="https://sitecore.namics.com/files/2018/06/002-300x192.png" alt="002" width="300" height="192" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/002.png"><img class="alignnone size-medium wp-image-4701" src="/files/2018/06/002-300x192.png" alt="002" width="300" height="192" /></a></p>
 <ul>
 <li>On&nbsp;<strong>Configure Application Credentials</strong>&nbsp;tab, choose Generate a shared secret. Copy the secret and save it, because you will not be able to access it anymore. However, this secret will not be required for the rest of configuration process and will not be used in Open ID authentication.</li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/003.png"><img class="alignnone size-medium wp-image-4702" src="https://sitecore.namics.com/files/2018/06/003-300x195.png" alt="003" width="300" height="195" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/003.png"><img class="alignnone size-medium wp-image-4702" src="/files/2018/06/003-300x195.png" alt="003" width="300" height="195" /></a></p>
 <ul>
 <li>On&nbsp;<strong>Configure Web API</strong>&nbsp;tab, for&nbsp;<strong>Identifier</strong>&nbsp;enter the same&nbsp;<strong>Client Identifier</strong>&nbsp;that was generated in step 2.</li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/004.png"><img class="alignnone size-medium wp-image-4704" src="https://sitecore.namics.com/files/2018/06/004-300x261.png" alt="004" width="300" height="261" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/004.png"><img class="alignnone size-medium wp-image-4704" src="/files/2018/06/004-300x261.png" alt="004" width="300" height="261" /></a></p>
 <ul>
 <li>On&nbsp;<strong>Choose Access Control Policy&nbsp;</strong>tab, don't change anything. The Policy should be "Permit everyone".</li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/0051.png"><img class="alignnone size-medium wp-image-4707" src="https://sitecore.namics.com/files/2018/06/0051-300x261.png" alt="005" width="300" height="261" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/0051.png"><img class="alignnone size-medium wp-image-4707" src="/files/2018/06/0051-300x261.png" alt="005" width="300" height="261" /></a></p>
 <ul>
 <li>On&nbsp;<strong>Configure Application Permissions</strong>&nbsp;tab, add&nbsp;<strong>openid</strong>&nbsp;and&nbsp;<strong>allatclaims</strong>&nbsp;to&nbsp;<strong>Permitted scopes.</strong></li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/006.png"><img class="alignnone size-medium wp-image-4708" src="https://sitecore.namics.com/files/2018/06/006-300x259.png" alt="006" width="300" height="259" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/006.png"><img class="alignnone size-medium wp-image-4708" src="/files/2018/06/006-300x259.png" alt="006" width="300" height="259" /></a></p>
 <ul>
 <li>Review the Summary screen and complete the configuration.</li>
 </ul>
 <p>&nbsp;</p>
 <p><strong>Customize claims to send Active Directory Attributes</strong></p>
 <p>From the&nbsp;ADFS Management Console, go to Application Groups and open the properties of previously created application group. Select Web API application and click on Edit. Go to the&nbsp;<strong>Issuance Transform Rules</strong>&nbsp;tab.</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/007.png"><img class="alignnone size-medium wp-image-4710" src="https://sitecore.namics.com/files/2018/06/007-268x300.png" alt="007" width="268" height="300" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/007.png"><img class="alignnone size-medium wp-image-4710" src="/files/2018/06/007-268x300.png" alt="007" width="268" height="300" /></a></p>
 <p>To send Active Directory group as a claim:</p>
 <ul>
 <li>Add new rule, and for the&nbsp;<strong>Claim rule template</strong>&nbsp;choose&nbsp;<strong>Send Group Membership as a Claim</strong></li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/008.png"><img class="alignnone size-medium wp-image-4711" src="https://sitecore.namics.com/files/2018/06/008-300x245.png" alt="008" width="300" height="245" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/008.png"><img class="alignnone size-medium wp-image-4711" src="/files/2018/06/008-300x245.png" alt="008" width="300" height="245" /></a></p>
 <ul>
 <li>On the&nbsp;<strong>Configure Rule tab</strong>, enter the name for the rule, browse for the Active Directory user group you would like to send as a claim, and define the outgoing claim type and value.</li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/009.png"><img class="alignnone size-medium wp-image-4712" src="https://sitecore.namics.com/files/2018/06/009-300x244.png" alt="009" width="300" height="244" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/009.png"><img class="alignnone size-medium wp-image-4712" src="/files/2018/06/009-300x244.png" alt="009" width="300" height="244" /></a></p>
 <ul>
 <li>Click Finish to complete the Wizard.</li>
 </ul>
@@ -78,7 +78,7 @@ comments: []
 <ul>
 <li>Add new rule, and for the&nbsp;<strong>Claim rule template</strong>&nbsp;choose&nbsp;<strong>Send Claims Using a Custom Rule</strong></li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/06/010.png"><img class="alignnone size-medium wp-image-4714" src="https://sitecore.namics.com/files/2018/06/010-300x243.png" alt="010" width="300" height="243" /></a></p>
+<p><a class="fancybox" href="/files/2018/06/010.png"><img class="alignnone size-medium wp-image-4714" src="/files/2018/06/010-300x243.png" alt="010" width="300" height="243" /></a></p>
 <ul>
 <li>On&nbsp;the&nbsp;<strong>Configure Rule tab</strong>, enter the name for the rule, and for the Custom rule add:</li>
 </ul>
@@ -145,4 +145,4 @@ comments: []
 <li>If you don't have a valid SSL certificate for your ADFS server, you won't be able to authenticate your Sitecore with ADFS. Add this line to the constructor of the&nbsp;CustomADFSIdentityProvider to enable authentication with invalid ADFS certificate:<script src="https://gist.github.com/marko-cekic/2b2211a3a63c87a6d17e7bcdd691293c.js"></script></li>
 </ul>
 <p>After all this, go to he login screen of your Sitecore instance. Below the standard username and password fields, there should be a new button with the caption "Sign-in with ADFS". Click on this button will start the federated authentication process with ADFS.</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2019/03/login-screen.png"><img class="alignnone size-medium wp-image-5539" src="https://sitecore.namics.com/files/2019/03/login-screen-300x289.png" alt="login screen" width="300" height="289" /></a></p>
+<p><a class="fancybox" href="/files/2019/03/login-screen.png"><img class="alignnone size-medium wp-image-5539" src="/files/2019/03/login-screen-300x289.png" alt="login screen" width="300" height="289" /></a></p>

@@ -44,7 +44,7 @@ comments: []
 <p>The solution is based on an <a href="https://sitecorejunkie.com/2013/01/26/who-just-published-that-log-publishing-statistics-in-the-sitecore-client/" target="_blank" rel="noopener">article by Mike Reynolds</a> in 2013 &ndash; however, the code provided by Mike doesn't work correctly in a multi-version and multi-language instance. So I fixed that.</p>
 <h3>Let's dig in: extend your Item Statistics Section in Sitecore</h3>
 <p>I don't want to extend the original item template because any version update of Sitecore will destroy those customized changes. So I made a new custom item section and let the original template inherit from it:</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2019/04/blog-statistics-section-001.jpg" target="_blank"><img class="alignnone size-full wp-image-5575" src="https://sitecore.namics.com/files/2019/04/blog-statistics-section-001.jpg" alt="blog-statistics-section-001" width="791" height="556" /></a></p>
+<p><a class="fancybox" href="/files/2019/04/blog-statistics-section-001.jpg" target="_blank"><img class="alignnone size-full wp-image-5575" src="/files/2019/04/blog-statistics-section-001.jpg" alt="blog-statistics-section-001" width="791" height="556" /></a></p>
 <p>Now I know what you might think:</p>
 <blockquote><p>&hellip;but a version update will revert THOSE changes too!?</p></blockquote>
 <p>That's basically true, but I synched the original Statistics section with <a href="https://github.com/SitecoreUnicorn/Unicorn" target="_blank" rel="noopener">Unicorn</a> &ndash; however, EXCLUDING it's children. So any changes should not affect my customized changes :)</p>
@@ -60,26 +60,26 @@ comments: []
 </ul>
 <p><strong>Please note:</strong> it's very, very, very important, that this section <strong>doesn't inherit</strong> from the standard template! Because this would mess up the whole item structure database-wise - causing your Sitecore solution not to work anymore. Believe me, I've been there ;)</p>
 <p>So, instead, <strong>use&nbsp;<em>{00000000-0000-0000-0000-000000000000}</em> as base template.</strong></p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2019/04/blog-statistics-section-0021.jpg" target="_blank"><img class="alignnone wp-image-5577" src="https://sitecore.namics.com/files/2019/04/blog-statistics-section-0021.jpg" alt="blog-statistics-section-002" width="550" height="305" /></a></p>
+<p><a class="fancybox" href="/files/2019/04/blog-statistics-section-0021.jpg" target="_blank"><img class="alignnone wp-image-5577" src="/files/2019/04/blog-statistics-section-0021.jpg" alt="blog-statistics-section-002" width="550" height="305" /></a></p>
 <h3>Required field configurations for the new section</h3>
 <p>We go ahead and add the following two fields to the template. Name the fields with two underscores:</p>
 <ul>
 <li><em>__Published</em></li>
 <li><em>__Published by</em></li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2019/04/blog-statistics-section-003.jpg" target="_blank"><img class="alignnone wp-image-5578" src="https://sitecore.namics.com/files/2019/04/blog-statistics-section-003.jpg" alt="blog-statistics-section-003" width="550" height="115" /></a></p>
+<p><a class="fancybox" href="/files/2019/04/blog-statistics-section-003.jpg" target="_blank"><img class="alignnone wp-image-5578" src="/files/2019/04/blog-statistics-section-003.jpg" alt="blog-statistics-section-003" width="550" height="115" /></a></p>
 <p>And once done &amp; saved, change the title of each field back to "Published" and "Published by" (without underscores)</p>
 <ul>
 <li><em>Published</em></li>
 <li><em>Published by</em></li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2019/04/blog-statistics-section-004.jpg" target="_blank"><img class="alignnone size-full wp-image-5579" src="https://sitecore.namics.com/files/2019/04/blog-statistics-section-004.jpg" alt="blog-statistics-section-004" width="789" height="486" /></a></p>
+<p><a class="fancybox" href="/files/2019/04/blog-statistics-section-004.jpg" target="_blank"><img class="alignnone size-full wp-image-5579" src="/files/2019/04/blog-statistics-section-004.jpg" alt="blog-statistics-section-004" width="789" height="486" /></a></p>
 <h3>Now it's time to inherit...</h3>
 <p>Let the original Sitecore statistics section inherit from the new one:</p>
 <ul>
 <li>/sitecore/templates/System/Templates/Sections/Statistics</li>
 </ul>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2019/04/blog-statistics-section-005.jpg"><img class="alignnone wp-image-5581" src="https://sitecore.namics.com/files/2019/04/blog-statistics-section-005.jpg" alt="blog-statistics-section-005" width="550" height="221" /></a></p>
+<p><a class="fancybox" href="/files/2019/04/blog-statistics-section-005.jpg"><img class="alignnone wp-image-5581" src="/files/2019/04/blog-statistics-section-005.jpg" alt="blog-statistics-section-005" width="550" height="221" /></a></p>
 <p>As you can see, that template is under Unicorn sync.<br />
 And again: before you add the new section to the Sitecore system section as base template make sure the new custom section <strong>doesn't inherit from the "standard template"</strong> &ndash; or you'll say "Hasta la vista" to your Sitecore database!</p>
 <h3>Keeping everything in-sync</h3>

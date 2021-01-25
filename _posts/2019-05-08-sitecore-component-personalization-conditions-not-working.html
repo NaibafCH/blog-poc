@@ -33,13 +33,13 @@ tags:
 comments: []
 ---
 <h3>You may be working with personalization conditions on components in the Sitecore Experience Editor, and when trying to <strong>preview any of your condition rules&nbsp;</strong>&ndash; simply&nbsp;<strong>nothing changes</strong>.</h3>
-<p><!--more--><img class="alignnone size-full wp-image-5706" src="https://sitecore.namics.com/files/2019/05/Sitecore-component-personalization-condition-preview-not-working.png" alt="Teaser showing a Sitecore component personalization condition preview not working" width="575" height="391" /></p>
+<p><!--more--><img class="alignnone size-full wp-image-5706" src="/files/2019/05/Sitecore-component-personalization-condition-preview-not-working.png" alt="Teaser showing a Sitecore component personalization condition preview not working" width="575" height="391" /></p>
 <h2>What is going on?</h2>
 <p>In this case, check if you may have <strong>disabled&nbsp;or opted-out</strong> the&nbsp;<a href="/2015/03/13/sitecore-cookies/" target="_blank">crucial analytics cookie</a>&nbsp;&laquo;<strong>SC_ANALYTICS_GLOBAL_COOKIE<em>&raquo;</em></strong>.</p>
-<p><img class="alignnone wp-image-5704" src="https://sitecore.namics.com/files/2019/05/SC_ANALYTICS_GLOBAL_COOKIE-disabled-via-cookie-wall-opt-in-setting.png" alt="Screenshot of SC_ANALYTICS_GLOBAL_COOKIE setting in a cookie wall opt-in" width="550" height="129" /></p>
+<p><img class="alignnone wp-image-5704" src="/files/2019/05/SC_ANALYTICS_GLOBAL_COOKIE-disabled-via-cookie-wall-opt-in-setting.png" alt="Screenshot of SC_ANALYTICS_GLOBAL_COOKIE setting in a cookie wall opt-in" width="550" height="129" /></p>
 <p>This may happen when you integrated a cookie wall, e.g. in accordance with GDPR, and <strong>explicitly need to opt-in to any marketing, analytics and/or personalization cookies</strong>. In addition, your integration might not EXCLUDE these mechanisms for Sitecore <strong>content managers working in the Experience Editor edit or preview mode</strong> &ndash; basically causing the Sitecore personalization features to feel "broken".</p>
 <h3><strong>How to set&nbsp;the&nbsp;SC_ANALYTICS_GLOBAL_COOKIE to "true" (workaround)</strong></h3>
-<p><img class="alignnone wp-image-5705 size-full" src="https://sitecore.namics.com/files/2019/05/SC_ANALYTICS_GLOBAL_COOKIE-disallowed-by-a-false-parameter.png" alt="Screenshot of SC_ANALYTICS_GLOBAL_COOKIE cookie parameters in a browser developer console" width="648" height="57" /></p>
+<p><img class="alignnone wp-image-5705 size-full" src="/files/2019/05/SC_ANALYTICS_GLOBAL_COOKIE-disallowed-by-a-false-parameter.png" alt="Screenshot of SC_ANALYTICS_GLOBAL_COOKIE cookie parameters in a browser developer console" width="648" height="57" /></p>
 <p>A) While&nbsp;authenticated in Sitecore and <strong>in the Experience Editor</strong></p>
 <ol>
 <li>navigate to&nbsp;your site's&nbsp;<strong>cookie wall</strong></li>

@@ -42,7 +42,7 @@ comments: []
 <!--more--><br />
 <h3>Required Sitecore core-database configurations</h3>
 <p>The first thing is to go to the Core database in the Sitecore backend, find the default user profile item located here <em>/sitecore/system/Settings/Security/Profiles/User</em>, duplicate it and give it a name. I named mine <em>Timecontrolled</em> User. After this add the needed <em>datetime</em>-fields to the new template.</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/12/UserTemplate.png"><img class="alignnone size-large wp-image-5122" src="https://sitecore.namics.com/files/2018/12/UserTemplate-1024x208.png" alt="UserTemplate" width="1024" height="208" /></a></p>
+<p><a class="fancybox" href="/files/2018/12/UserTemplate.png"><img class="alignnone size-large wp-image-5122" src="/files/2018/12/UserTemplate-1024x208.png" alt="UserTemplate" width="1024" height="208" /></a></p>
 <p>Still in the Core database context go to <em>/sitecore/system/Settings/Security/Profiles</em> and add your new profile.</p>
 <p>This is it for now in Sitecore.</p>
 <h3>Enhance your project with a new class</h3>
@@ -52,13 +52,13 @@ comments: []
 <h3>Setup a custom task command in Sitecore</h3>
 <p>Now that we have our code we switch back to the Sitecore backend and go <em>/sitecore/system/Tasks</em> and add a new command in the Commands folder.</p>
 <p>Fill in the fields as you are used to and the select the new profile. In the type field insert the path to your class and the assembly and write our method name Execute in the method field.</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/12/command.png"><img class="alignnone size-full wp-image-5135" src="https://sitecore.namics.com/files/2018/12/command.png" alt="command" width="807" height="167" /></a></p>
+<p><a class="fancybox" href="/files/2018/12/command.png"><img class="alignnone size-full wp-image-5135" src="/files/2018/12/command.png" alt="command" width="807" height="167" /></a></p>
 <p>The select the Schedules folder and insert a new schedule. In the commands field choose the command we just created. You can leave the items field empty and in the schedule field enter the pattern when the task should run. If you need help with defining your schedule there is a good explanation <a href="https://www.degdigital.com/insights/how-to-create-sitecore-scheduled-task/" target="_blank">here</a>.</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/12/schedule.png"><img class="alignnone size-full wp-image-5137" src="https://sitecore.namics.com/files/2018/12/schedule.png" alt="schedule" width="917" height="274" /></a></p>
+<p><a class="fancybox" href="/files/2018/12/schedule.png"><img class="alignnone size-full wp-image-5137" src="/files/2018/12/schedule.png" alt="schedule" width="917" height="274" /></a></p>
 <h3>Time to test it out</h3>
 <p>Now that we have everything in place go to the <em>User Manager</em> and create a new&nbsp;user.</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/12/CreateUser.png"><img class="alignnone size-medium wp-image-5128" src="https://sitecore.namics.com/files/2018/12/CreateUser-244x300.png" alt="CreateUser" width="244" height="300" /></a></p>
+<p><a class="fancybox" href="/files/2018/12/CreateUser.png"><img class="alignnone size-medium wp-image-5128" src="/files/2018/12/CreateUser-244x300.png" alt="CreateUser" width="244" height="300" /></a></p>
 <p>After saving open the user in the editor and select the profile tab and edit the profile.</p>
 <p>Fill in the dates needed in the newly created fields.</p>
-<p><a class="fancybox" href="https://sitecore.namics.com/files/2018/12/EditProfile.png"><img class="alignnone size-medium wp-image-5129" src="https://sitecore.namics.com/files/2018/12/EditProfile-300x224.png" alt="EditProfile" width="300" height="224" /></a></p>
+<p><a class="fancybox" href="/files/2018/12/EditProfile.png"><img class="alignnone size-medium wp-image-5129" src="/files/2018/12/EditProfile-300x224.png" alt="EditProfile" width="300" height="224" /></a></p>
 <h3>That is the whole magic.</h3>

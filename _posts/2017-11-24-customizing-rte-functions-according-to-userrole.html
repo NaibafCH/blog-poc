@@ -41,7 +41,7 @@ comments: []
 <div>We create two toolbars within the "Html Editor Profiles", in the first Toolbar "Toolbar 1" we will add the buttons (Copy, Paste, Undo, Redo, Italic and Superscript) and within the second Toolbar "Toolbar 2" we will place the "Insert Link" button only.</div>
 <div>First we create own Html Editor Profile, change to "core" database. Open the Content Editor, go to sitecore/system/settings/Html Editor Profiles, you will find some default Html Editor Profiles, like Rich Text Default, Rich Text Full etc. As the name indicates, those are pre configured rich text profile with several functions, Rich text default for example, contains the default toolbar functions, like Bold, Italic, Divider etc. This profile contains the "Insert Link" button, that we need. So we will create a similar profile, the easiest way to achieve that is, right click on Rich Text Default Profile folder and click on "Duplicate" in the context menu.</div>
 <div></div>
-<div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Duplicate_RichTextDefault.png" alt="" /><a class="fancybox" href="https://sitecore.namics.com/files/2017/11/Duplicate_RichTextDefault.png"><img class="alignnone size-medium wp-image-4417" src="https://sitecore.namics.com/files/2017/11/Duplicate_RichTextDefault-231x300.png" alt="Duplicate_RichTextDefault" width="231" height="300" /></a></div>
+<div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Duplicate_RichTextDefault.png" alt="" /><a class="fancybox" href="/files/2017/11/Duplicate_RichTextDefault.png"><img class="alignnone size-medium wp-image-4417" src="/files/2017/11/Duplicate_RichTextDefault-231x300.png" alt="Duplicate_RichTextDefault" width="231" height="300" /></a></div>
 <div></div>
 <div>We rename it to "Custom Rich Text Profile".</div>
 <div>When we expand the content of this new duplicated profile, we will see that we have one toolbar only "Toolbar 1", so we create a second toolbar by duplicating "Toolbar 1". Right click on "Toolbar 1" and select "Duplicate", rename it to "Toolbar 2", at the end delete all other buttons within "Toolbar 2" except the "Insert Link" button and delete the "Insert Link" button within "Toolbar 1". And don't forget to save.</div>
@@ -50,7 +50,7 @@ comments: []
 <div>In the next step, we will add the path of the new created rich text profile to the datasource of rich text editor within the component, in this way sitecore know which profile should be showed in the used rich text editor.</div>
 <div>Go to "master" database, and open the template, which contains the rich text editor. Add in the data source field of the rich text editor the path of the "Custom Rich Text Profile" folder.</div>
 <div></div>
-<div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Paste_RTE_Profile_Path.png" alt="" /><a class="fancybox" href="https://sitecore.namics.com/files/2017/11/Paste_RTE_Profile_Path.png"><img class="alignnone size-medium wp-image-4418" src="https://sitecore.namics.com/files/2017/11/Paste_RTE_Profile_Path-300x88.png" alt="Paste_RTE_Profile_Path" width="300" height="88" /></a></div>
+<div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Paste_RTE_Profile_Path.png" alt="" /><a class="fancybox" href="/files/2017/11/Paste_RTE_Profile_Path.png"><img class="alignnone size-medium wp-image-4418" src="/files/2017/11/Paste_RTE_Profile_Path-300x88.png" alt="Paste_RTE_Profile_Path" width="300" height="88" /></a></div>
 <div></div>
 <h3>2. Set the&nbsp;access&nbsp;rights</h3>
 <div></div>
@@ -103,14 +103,14 @@ comments: []
 <div></div>
 <div>Sitecore provides a useful tool called "Security Editor"</div>
 <div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Security_Editor.png" alt="" /></div>
-<div><a class="fancybox" href="https://sitecore.namics.com/files/2017/11/Security_Editor.png"><img class="alignnone size-medium wp-image-4419" src="https://sitecore.namics.com/files/2017/11/Security_Editor-294x300.png" alt="Security_Editor" width="294" height="300" /></a></div>
+<div><a class="fancybox" href="/files/2017/11/Security_Editor.png"><img class="alignnone size-medium wp-image-4419" src="/files/2017/11/Security_Editor-294x300.png" alt="Security_Editor" width="294" height="300" /></a></div>
 <div></div>
 <div></div>
 <div>With the "Security Editor" we could set access rights for&nbsp;explicit&nbsp;fields and items.</div>
 <div>We need to switch again to "core" database, to set access rights directly on "Custom Rich Text Editor".</div>
 <div>We open the security Editor, select the role user or author, as needed. Expand again&nbsp;sitecore/system/settings/Html Editor Profiles/Custom Rich Text Profile, select "Toolbar 2" and set the read, write, edit etc. rights to deny.</div>
 <div></div>
-<div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Set_Deny_Toolbar2_User.png" alt="" /><a class="fancybox" href="https://sitecore.namics.com/files/2017/11/Set_Deny_Toolbar2_User.png"><img class="alignnone size-medium wp-image-4420" src="https://sitecore.namics.com/files/2017/11/Set_Deny_Toolbar2_User-300x123.png" alt="Set_Deny_Toolbar2_User" width="300" height="123" /></a></div>
+<div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Set_Deny_Toolbar2_User.png" alt="" /><a class="fancybox" href="/files/2017/11/Set_Deny_Toolbar2_User.png"><img class="alignnone size-medium wp-image-4420" src="/files/2017/11/Set_Deny_Toolbar2_User-300x123.png" alt="Set_Deny_Toolbar2_User" width="300" height="123" /></a></div>
 <div></div>
 <div>Until this point we don't need to do any further actions, the toolbar "Toolbar 2" with "Insert Link" button is denied for all users with Author or User as role. "Toolbar 1" and "Toolbar 2" are per default accessible for other roles like Webmaster.</div>
 <div></div>
@@ -120,7 +120,7 @@ comments: []
 <div></div>
 <div>So we set the full rights of "Webmaster" explicit on the profile folder of the&nbsp;tool bars, in our example&nbsp;"Custom Rich Text Editor". &nbsp;And for "User/Author" we broke the inheritance on "Toolbar 2".</div>
 <div><img src="file:///C:/Users/nayadi/AppData/Local/Temp/enhtmlclip/Break_Inheritance.png" alt="" /></div>
-<div><a class="fancybox" href="https://sitecore.namics.com/files/2017/11/Break_Inheritance.png"><img class="alignnone size-medium wp-image-4416" src="https://sitecore.namics.com/files/2017/11/Break_Inheritance-300x119.png" alt="Break_Inheritance" width="300" height="119" /></a></div>
+<div><a class="fancybox" href="/files/2017/11/Break_Inheritance.png"><img class="alignnone size-medium wp-image-4416" src="/files/2017/11/Break_Inheritance-300x119.png" alt="Break_Inheritance" width="300" height="119" /></a></div>
 <div></div>
 <div>That is all. When a Webmaster use the rich text editor, "Toolbar 2" will be visible and editable, but for "User/Author" it will be hidden.</div>
 <div>That was just an example how we could edit the access rights on several items the way we need, it was a guideline more than a checklist.</div>
